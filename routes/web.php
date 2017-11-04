@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get("/pages", "PagesController@index");
+Route::get("/pages/{page}", "PagesController@show");
 
 Auth::routes();
 

@@ -20,4 +20,15 @@ class PagesTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee($page->title);
     }
+
+    /** @test */
+    public function a_user_can_browse_a_specific_page()
+    {
+        $page = factory("App\Page")->create();
+
+        $response = $this->get('/pages/' . $page->id);
+
+        $response->assertStatus(200);
+        $response->assertSee($page->title);
+    }
 }

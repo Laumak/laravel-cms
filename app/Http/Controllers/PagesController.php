@@ -48,7 +48,7 @@ class PagesController extends Controller
      */
     public function show(Page $page)
     {
-        //
+        return view("pages.show", compact("page"));
     }
 
     /**

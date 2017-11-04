@@ -10,7 +10,11 @@
                 <div class="panel-body">
                     <ul>
                         @foreach($pages as $page)
-                            <li>{{ $page->title }}</li>
+                            <li>
+                                <a href="/pages/{{$page->id}}">
+                                    {{ $page->title }}
+                                </a>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
